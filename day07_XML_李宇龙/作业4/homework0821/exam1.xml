@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><exam>
+	
+	<student ID="0" examid="444" idcard="333">
+		<name>李四光</name>
+		<location>大连</location>
+		<grade>97</grade>
+	<性别>男</性别></student>
+<student ID="1" examid="666" idcard="555"><name>王五</name><location>铁岭</location><grade>99</grade><性别>男</性别></student></exam>

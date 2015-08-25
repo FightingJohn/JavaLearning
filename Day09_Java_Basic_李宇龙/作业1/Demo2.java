@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class  Demo2
+{
+	public static void main(String[] args) 
+	{
+		//java的标准输入
+		int a, b;
+		Scanner scan = new Scanner(System.in);
+
+		a = scan.nextInt();
+		b = scan.nextInt();
+		System.out.println("a + b = "+ (a+b));
+	}
+}

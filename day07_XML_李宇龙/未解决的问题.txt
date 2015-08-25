@@ -1,0 +1,4 @@
+1.如何通过java语言向xml中加入换行和制表符
+
+2.向元素添加属性的时候，    通过getElementByTagName（）方法获得返回值类型是Node。
+  因为Node没有setAttribute（）的方法，必须要强制转化为子接口Element。调用Element中的setAttribute（）方法。 有没有不用强制转换的方法？

@@ -1,0 +1,10 @@
+<script>
+	var xmldoc = new ActiveXObject("Microsoft.XMLDOM");
+    xmldoc.validateOnParse = "true";
+	xmldoc.load("newsPaper.xml");
+
+	var errorinfo = xmldoc.parseError.reason;  
+    var errorline = xmldoc.parseError.line
+    document.write(errorinfo+","+errorline);
+
+</script>

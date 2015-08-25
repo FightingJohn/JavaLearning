@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>  
+  <script>
+ 
+
+     function addTR(){
+	//找到要插入信息的table
+	//增加一个tr节点，for循环增加td节点
+	//找到td中要插入的信息
+	//将信息赋值给td的文本节点值
+		var node = document.getElementById("tabInfo");
+		var newtr = document.createElement("tr");
+		node.appendChild(newtr);
+		var x = node.childNodes;
+		var arr = new Array();
+		arr[0]=document.getElementById("username").value;
+		arr[1]=document.getElementById("email").value;
+		arr[2]=document.getElementById("age").value;
+		var num = x.length;
+		
+		for(var i=0;i<3;i++){
+			var newtd = document.createElement("td");
+			var newtxt = document.createTextNode(arr[i]);
+			newtd.appendChild(newtxt);
+			x[num-1].appendChild(newtd);
+		}
+		//inss如何处理啊啊啊啊啊
+		
+		
+         var newtd = document.createElement("td");
+		 var newbt = document.createElement("input");
+		 newbt.setAttribute("type","button");
+		 
+		 newbt.setAttribute("onclick","deleteRowsw(this)");//。。。。。
+		 newbt.setAttribute("type","button");
+		 newbt.setAttribute("value","删除")
+		 newtd.appendChild(newbt);
+		 x[num-1].appendChild(newtd);
+
+//
+//
+//		 var inss = 3;
+//		 var delClick = document.createAttribute("onclick");    //创建属性
+//          delClick.value="deleteRowsw('"+inss+"');";
+//          newtr.childNodes[3].setAttributeNode(delClick); //添加属性
+//
+//		//将删除点击可实现删除操作
+		
+
+	}
+
+ 
+	function deleteRowsw(inss){
+		//。。。。。。
+		var del=inss.parentNode.parentNode.rowIndex;
+            document.getElementById("tabInfo").deleteRow(del);
+	}
+
+	</script>
+ </head>
+
+ <body>
+
+
+			<table align="center" cellpadding="10" cellspacing="3" >
+				<tr>
+					<td>姓名：<input type="text" id="username"/></td>
+					<td>Email:<input type="text" id="email"/></td>
+					<td>年龄:<input type="text" id="age"/></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><input type="button" value="添加" onclick="addTR()"/></td>
+				</tr>
+			 </table>
+			 <br/>
+			 <br/>
+			 <br/>
+			<hr/>
+
+				 <table id="tabInfo" align="center" width="500" border="1">
+					<tr>
+						<td>姓名</td>
+						<td>Email</td>
+						<td>年龄</td>
+						<td>操作</td>
+					</tr>
+					
+				</table>
+
+ </body>
+</html>

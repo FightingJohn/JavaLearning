@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NEWSPAPER SYSTEM "newspaper.dtd">
+
+<NEWSPAPER>
+	<ARTICLE AUTHOR="lyl" EDITOR="xiaoming" DATE="2015-08-21" EDITION="3">
+		<HEADLINE>天津爆炸</HEADLINE>
+		<BYLINE>是谁的责任</BYLINE>
+		<LEAD>暗藏玄机</LEAD>
+		<BODY>2015年8月12日，位于天津市xxx区发生一起。。。</BODY>
+		<NOTES>爆炸，责任，玄机</NOTES>
+
+	</ARTICLE>
+
+	<ARTICLE AUTHOR="daming">
+		<HEADLINE>&NEWSPAPER;</HEADLINE>
+		<BYLINE>&PUBLISHER;</BYLINE>
+		<LEAD>&COPYRIGHT;</LEAD>
+		<BODY>2015年8月12日，位于天津市xxx区发生一起。。。</BODY>
+		<NOTES>爆炸，责任，玄机</NOTES>
+
+	</ARTICLE>
+</NEWSPAPER>

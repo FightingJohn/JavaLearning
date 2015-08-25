@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script type="text/javascript">
+  function changeNode(){
+	var oldNode = document.getElementById("bj")
+	var gameNode = document.getElementById("game");
+	var tempNode = gameNode.cloneNode(true);		//必须用tempNode来克隆新的节点，否则新节点会消失
+	oldNode.replaceNode(tempNode, oldNode);
+  }
+
+  </script>
+
+ </head>
+ <body>
+    <ul >
+		<li id="bj" onclick="changeNode()">北京</li>
+		<li>湖南</li>
+		<li>山东</li>
+	</ul>
+	<ul>
+		<li  id="game">打<p>灰机</p></li>
+		<li>抓泥鳅</li>
+		<li>斗地主</li>
+	</ul>
+
+ </body>
+</html>

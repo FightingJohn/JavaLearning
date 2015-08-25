@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script type="text/javascript">
+  
+    function addOptions(){
+		var selectNode = document.getElementsByTagName("select")
+		//创建一个元素节点
+		var optionNode = document.createElement("option")
+		//添加一个属性节点
+		var valueNode = optionNode.setAttribute("value", "小学")
+		//添加一个文本节点
+		var txtNode = document.createTextNode("小学**")
+
+		//组装节点
+		optionNode.appendChild(txtNode)
+
+		selectNode[0].appendChild(optionNode)
+	}
+  </script>
+
+ </head>
+ <body>
+  <input type="button" value="添加选项" onclick="addOptions()"/>
+	<select>
+		<option>本科</option>
+		<option>专科</option>
+		<option>高中</option>
+		<option>初中</option>
+	</select>
+
+ </body>
+</html>

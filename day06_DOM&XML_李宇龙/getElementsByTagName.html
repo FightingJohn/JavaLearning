@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+
+  function getVal(){
+	var h1Node = document.getElementsByTagName("h1");
+	//alert(h1Node[0].firstChild.nodeValue);
+	//alert(h1Node[0].childNodes[0].nodeValue);
+	alert(h1Node[0].innerHTML);
+
+  }
+
+  </script>
+
+ </head>
+ <body>
+   <h1 id="h1">明天休息</h1>
+	<input type="button" value="取值" onclick="getVal()"/>
+ </body>
+</html>

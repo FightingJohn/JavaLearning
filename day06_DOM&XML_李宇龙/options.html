@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+
+	function removeLeft(){
+		var leftSel = document.getElementById("left");
+		//selectedIndex
+		var selectedOpt = leftSel.selectedIndex;
+		var opt = leftSel.options[selectedOpt];
+			
+		var rightSel = document.getElementById("right");
+		rightSel.appendChild(opt);
+
+	}
+
+	function removeLeftAll(){
+		var leftSel = document.getElementById("left");
+		var alloptions = leftSel.options;
+
+		var rightSel = document.getElementById("right");
+		
+		var temp = alloptions.length
+		for(var i=0;i<temp;i++){
+			rightSel.appendChild(alloptions[0]);
+		}
+	}
+
+	function removeRight(){
+		var rightSel = document.getElementById("right");
+		
+		var selectedOpt = rightSel.selectedIndex;
+		var opt = rightSel.options[selectedOpt];
+			
+		var leftSel = document.getElementById("left");
+		leftSel.appendChild(opt);
+
+	}
+
+	function removeRightAll(){
+		var rightSel = document.getElementById("right");
+		var alloptions = rightSel.options;
+
+		var leftSel = document.getElementById("left");
+		
+		var temp = alloptions.length
+		for(var i=0;i<temp;i++){
+			leftSel.appendChild(alloptions[0]);
+		}
+			
+	}
+
+  </script>
+
+ </head>
+ <body>
+  <!--设置一个一行3列的表格-->
+  <table align="center">
+	<tr>
+		<td>
+		<select size="10" id="left">
+		<option>选项1</option>
+		<option>选项2</option>
+		<option>选项3</option>
+		<option>选项4</option>
+		<option>选项5</option>
+		<option>选项6</option>
+		<option>选项7</option>
+		<option>选项8</option>
+		</select>
+		</td>
+
+		<td>
+		<input type="button" value="--->" onclick="removeLeft()"/><br/>
+		<input type="button" value="===>" onclick="removeLeftAll()"/><br/>
+		<input type="button" value="<---" onclick="removeRight()"/><br/>
+		<input type="button" value="<===" onclick="removeRightAll()"/><br/>
+		</td>
+		<td>
+		<select size="10" id="right">
+
+		<option>选项9</option>
+		</select>
+		</td>
+	</tr>
+  </table>
+ </body>
+</html>

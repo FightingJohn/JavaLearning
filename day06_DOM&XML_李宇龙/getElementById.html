@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script type="text/javascript">
+  function getLi(){
+	var bjNode = document.getElementById("bj")
+	var bjchildNodes = bjNode.childNodes
+
+	for(var i=0; i<bjchildNodes.length; i++){
+		if(bjchildNodes[i].nodeType == 3){
+			alert(bjchildNodes[i].nodeName + "," +bjchildNodes[i].nodeType +"," +bjchildNodes[i].nodeValue)
+		}
+		else if(bjchildNodes[i].nodeType == 1){
+			alert(bjchildNodes[i].nodeName + "," +bjchildNodes[i].nodeType +"," +bjchildNodes[i].nodeValue)
+		}
+	}
+
+  }
+  </script>
+ </head>
+ <body>
+ <!--ul为无需列表-->
+ <ul>
+		<li id="bj" value="beijing">
+			北京
+			<h1>海淀</h1>
+			奥运
+		</li>
+		<li id="sh" value="shanghai">
+			上海
+		</li>
+ </ul>
+<br/>
+		<input type="button" value="li取值" onclick="getLi()"/>
+
+  
+ </body>
+</html>

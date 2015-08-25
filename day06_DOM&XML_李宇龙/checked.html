@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+ <!--全选/全不选-->
+ <script type="text/javascript">
+  function checkAll(chkValue){
+	var hobbyNode = document.getElementsByName("hobby")
+	for(var i=0; i<hobbyNode.length; i++){
+		hobbyNode[i].checked=chkValue
+	}
+  }
+
+  //--单选--
+  function checkonly(chkNode){
+	var hobbyNode = document.getElementsByName("hobby")
+	for(var i=0; i<hobbyNode.length; i++){
+		if(hobbyNode[i] == chkNode){
+			hobbyNode[i].checked=chkNode.checked
+		}
+	}
+  }
+  //反选
+  function reverseCheck(){
+	var hobbyNode = document.getElementsByName("hobby")
+	for(var i=0; i<hobbyNode.length; i++){
+		hobbyNode[i].checked = !hobbyNode[i].checked
+	}
+  }
+
+ </script>
+
+ </head>
+ <body>
+  
+  <h1>请选择你的爱好：</h1>
+   全选/全不选<input type="checkbox" name="hobbys" onclick="checkAll(this.checked)"/><br/>
+ <input type="checkbox" name="hobby" value="football" onclick="checkonly(this)"/>足球
+ <input type="checkbox" name="hobby" value="basketball" onclick="checkonly(this)"/>篮球
+ <input type="checkbox" name="hobby" value="swim" onclick="checkonly(this)"/>游泳
+ <input type="checkbox" name="hobby" value="singing" onclick="checkonly(this)"/>唱歌<br/>
+
+ <input type="button" value="全选" onclick="checkAll(true)"/> <input type="button" value="全不选" onclick="checkAll(false)"/>
+ <input type="button" value="反选" onclick="reverseCheck()"/>
+
+ </body>
+</html>

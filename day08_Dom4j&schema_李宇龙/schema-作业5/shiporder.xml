@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--¸ùÔªËØshiporder ±ØÐë°üº¬ÊôÐÔorderid ÆäÀàÐÍÎªstring-->
+<shiporder orderid="123456"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="shiporder.xsd">
+ <orderperson>FightingJohn</orderperson>
+ <shipto>
+  <name>wangdao</name>
+  <address>longhua</address>
+  <city>shenzhen</city>
+  <country>china</country>
+ </shipto>
+
+ <!--item½ÚµãÖÁÉÙÓÐÒ»¸ö£¬ Æä°üº¬µÄnote½Úµã¿ÉÓÐ¿ÉÎÞ-->
+ <item>
+  <title>books</title>
+  <note>many</note>
+  <quantity>3</quantity>
+  <price>10.90</price>
+ </item>
+ <item>
+  <title>food</title>
+  <quantity>1</quantity>
+  <price>9.90</price>
+ </item>
+</shiporder>

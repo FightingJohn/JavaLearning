@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <script type="text/javascript">
+
+  function getOptionText(){
+	var optionNodes = document.getElementsByTagName("option")
+	for(var i=0; i<optionNodes.length; i++){
+		alert(optionNodes[i].innerHTML);
+	}
+  
+  }
+
+  function getOptionText2(){
+	  var selectNode = document.getElementById("edu")
+	  var childNodes = selectNode.childNodes
+
+	  for(var i=0; i<childNodes; i++){
+		if(childNodes[i].nodeType != 3){
+			alert(childNodes[i].firstChild.nodeValue);
+		}
+	  }
+  }
+
+
+  </script>
+
+
+ </head>
+ <body>
+ <select name="edu" id="edu">
+	<option value="本科">本科**</option>
+	<option value="大专">大专**</option>
+	<option value="中专">中专**</option>
+	<option value="幼儿园">幼儿园**</option>
+ </select>
+ <br/>
+ <button onclick="getOptionText()">获取所有option文本</button>
+ <br/>
+ <button onclick="getOptionText2()">第二种方法</button>
+ </body>
+</html>

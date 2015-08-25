@@ -1,0 +1,31 @@
+1.声明xml文档，嘴简单语法<?xml version="1.0"?>
+  加入编码和说明是否独立
+  如：<?xml version="1.0" encoding="GB2312" standalone="yes"?>
+
+2.外部DTD导入 格式：<!DOCTYPE 根元素 SYSTEM "dtd文档路径">
+	内部DTDG格式：<!DOCTYPE 根元素[
+					<!ELEMENT >]>
+
+3.校验xml正确性
+1）.创建xml文档解析器对象
+var xmldoc = new ActiveXObject("Microsoft.XMLDOM");
+2）.开启xml校验xmldoc.validateOnParse = "true";
+3）.装载xml文档xmldoc.load("book.xml");
+4）.获取错误信息
+xmldoc.parseError.reason;  xmldoc.parseError.line
+打印信息 document.write(xmldoc.parseError.reason, xmldoc.parseError.line)
+
+4.DTD定义元素
+<!ELEMENT 元素名称 使用规则>
+
+DTD定义属性
+<!ATTLIST 元素名
+	属性名1 属性值类型 设置说明
+	。。。	
+>
+
+DTD定义引用实体
+DTD中定义：
+	<!ENTITY 实体名称“实体内容”>
+XML中引用：
+	应用方式：&实体名称
