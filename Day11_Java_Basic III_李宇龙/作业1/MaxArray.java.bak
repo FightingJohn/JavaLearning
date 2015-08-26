@@ -1,0 +1,21 @@
+class MaxArray 
+{
+	/*数组获取最值(获取数组中的最大值最小值)
+	设置一个临时变量max 初值为a[0],然后与数组中剩下的
+	每一个元素进行比较，谁大，max就等于谁。
+	*/
+
+	public static void main(String[] args) 
+	{
+		//初始化int类型数组
+		int[] arr = {1, 4, 3, 10, 8, 11, 23, 5, 6};
+		int max = a[0];
+
+		for(int i = 1; i < arr.length; i++){
+			if(max < arr[i])
+				max = arr[i];		
+		}
+
+		System.out.println("数组中最大值为：" + max);
+	}
+}
