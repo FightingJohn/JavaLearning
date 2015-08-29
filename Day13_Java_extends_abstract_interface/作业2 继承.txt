@@ -1,9 +1,0 @@
-1.设计一个表示二维平面上点的类Point，包含有表示坐标位置的protected 类型的
-成员变量x 和y，获取和设置x 和y 值的public 方法。
-2.设计一个表示二维平面上圆的类Circle，它继承自类Point，还包含有表示圆半径
-的protected 类型的成员变量r、获取和设置r 值的public 方法、计算圆面积的public 方
-法。
-3.设计一个表示圆柱体的类Cylinder，它继承自类Circle，还包含有表示圆柱体高的
-protected 类型的成员变量h、获取和设置h 值的public 方法、计算圆柱体体积的public
-方法。
-4.建立Cylinder 对象，输出其轴心位置坐标、半径、面积、高及其体积的值。
