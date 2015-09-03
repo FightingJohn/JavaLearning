@@ -1,0 +1,4 @@
+修该前面的每个练习，加上一个finally子句，在里面打印出一条语句。
+验证一下，如果try 或catch内含有return ，那么finally子句里的代码是否会执行到。
+
+答：无论try或者catch里面是否有return ，Finally里面的代码都会执行
