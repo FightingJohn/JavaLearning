@@ -1,0 +1,39 @@
+
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class Server implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		try {
+			DatagramSocket dsDatagramSocket= new DatagramSocket(10010);
+			
+			byte[] b = new byte[1024];
+			DatagramPacket dpDatagramPacket= new DatagramPacket(b, 1024);
+			
+			
+			while (true) {
+				
+				dsDatagramSocket.receive(dpDatagramPacket);
+				
+				byte[] data = dpDatagramPacket.getData();
+			    InetAddress address = dpDatagramPacket.getAddress();
+				int length=             dpDatagramPacket.getLength();
+				String ip = address.getHostAddress();
+				String string = new String(data,0,length);
+				System.out.println("UdpServer.main() IP is "+ip+": "+ string);
+				
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	
+
+	}
+
+}
