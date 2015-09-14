@@ -1,0 +1,22 @@
+实现4个servlet，分别为
+Servlet1 Servlet2 Servlet3 Servlet4
+
+然后给每个servlet配置如下的一些映射关系：
+Servlet1 映射到  /abc
+Servlet2 映射到  *.do   
+Servlet3 映射到  /abc/*
+Servlet4 映射到   /*
+
+ 
+问题：
+当请求URL为“/abc/a.html”，“/abc/*”和“/*”都匹配，哪个servlet响应
+	 。
+当请求URL为“/abc”时，“/abc/*”和“/abc”都匹配，哪个servlet响应
+	 
+当请求URL为“/abc/a.do”时，“/abc/*”和“*.do”都匹配，哪个servlet响应
+	 
+当请求URL为“/a.do”时，“/*”和“*.do”都匹配，哪个servlet响应
+	 
+当请求URL为“/xxx/yyy/a.do”时，“/*”和“*.do”都匹配，哪个servlet响应
+	 
+总结出规律了吗？

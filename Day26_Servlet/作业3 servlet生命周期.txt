@@ -1,0 +1,2 @@
+servlet Init() destroy() service()函数分别在什么时候会调用？
+请在如下三个函数内添加log，并实验证明。

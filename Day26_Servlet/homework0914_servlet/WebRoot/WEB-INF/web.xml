@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>Homework2</servlet-name>
+    <servlet-class>com.lyl.servlet.Homework2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Homework3</servlet-name>
+    <servlet-class>com.lyl.servlet.Homework3</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>Homework2</servlet-name>
+    <url-pattern>/servlet/Homework2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Homework3</servlet-name>
+    <url-pattern>/servlet/Homework3</url-pattern>
+  </servlet-mapping>
+
+</web-app>
