@@ -10,13 +10,27 @@ Servlet4 映射到   /*
  
 问题：
 当请求URL为“/abc/a.html”，“/abc/*”和“/*”都匹配，哪个servlet响应
+
+答：Servlet3
 	 。
 当请求URL为“/abc”时，“/abc/*”和“/abc”都匹配，哪个servlet响应
+
+答：Servlet1
 	 
 当请求URL为“/abc/a.do”时，“/abc/*”和“*.do”都匹配，哪个servlet响应
+
+答：Servlet3
 	 
 当请求URL为“/a.do”时，“/*”和“*.do”都匹配，哪个servlet响应
+
+答：Servlet4
 	 
 当请求URL为“/xxx/yyy/a.do”时，“/*”和“*.do”都匹配，哪个servlet响应
+
+答：Servlet4
 	 
 总结出规律了吗？
+
+答：（1）当/*和*.do在同一级的文件夹时，/*的优先级高于*.do
+
+（2）当/*和包含/* 或者 *.do和包含*.do，和URL越相似，优先级越高

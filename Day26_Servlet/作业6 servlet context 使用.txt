@@ -1,5 +1,0 @@
-1.使用servlet配置一个默认初始化参数，要求在多个servlet里都获取该初始化参数。
-
-2. 使用ServletContext实现一个servlet转发。
-   要求，servletA 转发给servletB的时候，给servletB传递一个参数。
-   （提示，使用ServletContext.setAttribute（）方法)

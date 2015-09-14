@@ -11,6 +11,62 @@
     <servlet-name>Homework3</servlet-name>
     <servlet-class>com.lyl.servlet.Homework3</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>Servlet1</servlet-name>
+    <servlet-class>com.lyl.homework4.Servlet1</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>Servlet2</servlet-name>
+    <servlet-class>com.lyl.homework4.Servlet2</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>Servlet3</servlet-name>
+    <servlet-class>com.lyl.homework4.Servlet3</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>Servlet4</servlet-name>
+    <servlet-class>com.lyl.homework4.Servlet4</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ServletCongfig1</servlet-name>
+    <servlet-class>com.lyl.homework5.ServletCongfig1</servlet-class>
+    <init-param>
+    	 <param-name>userName</param-name>
+    	 <param-value>Congfig111111</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletCongfig2</servlet-name>
+    <servlet-class>com.lyl.homework5.ServletCongfig2</servlet-class>
+    <init-param>
+    	 <param-name>userName</param-name>
+    	 <param-value>Congfig22222</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletCongfig3</servlet-name>
+    <servlet-class>com.lyl.homework5.ServletCongfig3</servlet-class>
+    <init-param>
+    	 <param-name>userName</param-name>
+    	 <param-value>Congfig3333333</param-value>
+    </init-param>
+  </servlet>
+  
+  
+  <servlet>
+    <servlet-name>ServletA</servlet-name>
+    <servlet-class>com.lyl.homework6.ServletA</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletB</servlet-name>
+    <servlet-class>com.lyl.homework6.ServletB</servlet-class>
+  </servlet>
+
+  
+
+
 
 
   <servlet-mapping>
@@ -21,5 +77,50 @@
     <servlet-name>Homework3</servlet-name>
     <url-pattern>/servlet/Homework3</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Servlet1</servlet-name>
+    <url-pattern>/servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet2</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet3</servlet-name>
+    <url-pattern>/servlet/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet4</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ServletCongfig1</servlet-name>
+    <url-pattern>/servlet/ServletCongfig1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletCongfig2</servlet-name>
+    <url-pattern>/servlet/ServletCongfig2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletCongfig3</servlet-name>
+    <url-pattern>/servlet/ServletCongfig3</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>ServletA</servlet-name>
+    <url-pattern>/servlet/ServletA</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ServletB</servlet-name>
+    <url-pattern>/servlet/ServletB</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  	<param-name>studentID</param-name>
+  	<param-value>12345678</param-value>
+  </context-param>
 
 </web-app>

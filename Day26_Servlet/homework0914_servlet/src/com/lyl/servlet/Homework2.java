@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /*
  * 手动实现一个servlet，要求用户去访问这个servlet的时候，
  * user每次在browser刷新都可以看到服务器当前的时间*/
