@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>Servlet1</servlet-name>
+    <servlet-class>com.lyl.response.Servlet1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet2</servlet-name>
+    <servlet-class>com.lyl.response.Servlet2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet4</servlet-name>
+    <servlet-class>com.lyl.response.Servlet4</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet3</servlet-name>
+    <servlet-class>com.lyl.response.Servlet3</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Servlet6</servlet-name>
+    <servlet-class>com.lyl.response.Servlet6</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>Servlet1</servlet-name>
+    <url-pattern>/servlet/Servlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet2</servlet-name>
+    <url-pattern>/servlet/Servlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet4</servlet-name>
+    <url-pattern>/servlet/Servlet4</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet3</servlet-name>
+    <url-pattern>/servlet/Servlet3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Servlet6</servlet-name>
+    <url-pattern>/servlet/Servlet6</url-pattern>
+  </servlet-mapping>
+
+</web-app>
