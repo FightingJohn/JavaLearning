@@ -11,6 +11,11 @@
     <servlet-name>HomeWork3_Redirect</servlet-name>
     <servlet-class>com.lyl.homework.HomeWork3_Redirect</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Homework4</servlet-name>
+    <servlet-class>com.lyl.homework.Homework4</servlet-class>
+  </servlet>
+
 
 
   <servlet-mapping>
@@ -20,6 +25,10 @@
   <servlet-mapping>
     <servlet-name>HomeWork3_Redirect</servlet-name>
     <url-pattern>/servlet/HomeWork3_Redirect</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Homework4</servlet-name>
+    <url-pattern>/servlet/Homework4</url-pattern>
   </servlet-mapping>
 
 </web-app>

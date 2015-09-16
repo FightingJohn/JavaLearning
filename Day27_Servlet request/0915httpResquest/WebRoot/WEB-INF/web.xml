@@ -15,6 +15,11 @@
     <servlet-name>HttpRequest3</servlet-name>
     <servlet-class>com.lyl.request.HttpRequest3</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>com.lyl.request.Test</servlet-class>
+  </servlet>
+
 
 
 
@@ -29,6 +34,10 @@
   <servlet-mapping>
     <servlet-name>HttpRequest3</servlet-name>
     <url-pattern>/servlet/HttpRequest3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/servlet/Test</url-pattern>
   </servlet-mapping>
 
 </web-app>

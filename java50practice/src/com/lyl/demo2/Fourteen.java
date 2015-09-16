@@ -1,5 +1,7 @@
 package com.lyl.demo2;
 
+import java.util.Scanner;
+
 public class Fourteen {
 
 	/**
@@ -11,10 +13,25 @@ public class Fourteen {
 	public static void main(String[] args) {
 		
 		int result = 0;				//程序运行结果
-		//代表第几个月时，对应的第几天
-		int[] months = {0, 0, 31, 28, 31, 30, 31, 30, 30, 31, 30, 31, 30};
+		//代表平年第几个月时，对应的第几天
+		int[] months = {0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
 		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("输入年份：");
+		int year = scan.nextInt();
+		System.out.print("输入年份：");
+		int month = scan.nextInt();
+		System.out.print("输入年份：");
+		int day = scan.nextInt();
 		
+		//判断是否为闰年
+		if(year%4 == 0 && year%100 != 0 || year%400 == 0)
+			result = 1;
+		result = result + months[month] + day;
+		
+		System.out.println(year +"年"+ month +"月"+ day +"日 是本年的第 "+ result +" 天");
+		
+		scan.close();
 
 	}
 

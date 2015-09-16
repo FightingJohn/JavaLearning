@@ -7,22 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.lyl.bean.User;
-
 public class Homework3 extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-	}
-
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
 		response.setContentType("text/html; charset=utf-8");
-		request.setCharacterEncoding("utf-8");
+		
 		String username = request.getParameter("username");
-//		byte[] b = user.getBytes("iso-8859-1");
+		
+		//加上下面两句在重定向哪里得到的会是乱码
+//		byte[] b = user.getBytes("iso-8859-1");				
 //		String username = new String(b, "utf-8");
 		String password = request.getParameter("password");
 		
@@ -31,6 +26,11 @@ public class Homework3 extends HttpServlet {
 		
 		response.sendRedirect("/homework0916_response/servlet/HomeWork3_Redirect"+info);
 		System.out.println(info);
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 	}
 
 }
