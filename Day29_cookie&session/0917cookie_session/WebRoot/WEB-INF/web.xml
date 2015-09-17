@@ -11,6 +11,30 @@
     <servlet-name>AllProducts</servlet-name>
     <servlet-class>com.lyl.cookie2.AllProducts</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>OneProduct</servlet-name>
+    <servlet-class>com.lyl.cookie2.OneProduct</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowLastTime</servlet-name>
+    <servlet-class>com.lyl.session.ShowLastTime</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>AllProducts2</servlet-name>
+    <servlet-class>com.lyl.session.AllProducts2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OneProduct2</servlet-name>
+    <servlet-class>com.lyl.session.OneProduct2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddToCar</servlet-name>
+    <servlet-class>com.lyl.session.AddToCar</servlet-class>
+  </servlet>
+
+
+
 
 
   <servlet-mapping>
@@ -20,6 +44,27 @@
   <servlet-mapping>
     <servlet-name>AllProducts</servlet-name>
     <url-pattern>/servlet/AllProducts</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OneProduct</servlet-name>
+    <url-pattern>/servlet/OneProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowLastTime</servlet-name>
+    <url-pattern>/servlet/ShowLastTime</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AllProducts2</servlet-name>
+    <url-pattern>/servlet/AllProducts2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OneProduct2</servlet-name>
+    <url-pattern>/servlet/OneProduct2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddToCar</servlet-name>
+    <url-pattern>/servlet/AddToCar</url-pattern>
   </servlet-mapping>
 
 </web-app>
