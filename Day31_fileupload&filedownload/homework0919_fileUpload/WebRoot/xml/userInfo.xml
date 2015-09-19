@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="Utf-8"?>
+
+<user> 
+  <person>
+    <name>lyl</name>
+    <age>23</age>
+    <password>12345</password>
+    <cellphone>13592732153</cellphone>
+    <hometown>河南</hometown>
+  </person>
+</user>
