@@ -1,0 +1,16 @@
+在数据库里插入如下 
+
+CREATE TABLE `student` (
+  `id` int(11) default NULL,
+  `name` varchar(20) default NULL,
+  `chinese` float default NULL,
+  `english` float default NULL,
+  `math` float default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+1000条记录。
+
+要求：
+1.1条1sql语句执行，看看需要多久。
+2.每次插入50条，一起执行，看看需要多久。
+
