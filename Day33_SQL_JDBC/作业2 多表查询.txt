@@ -1,0 +1,60 @@
+某大学研究生院有若干研究生导师，包括职工编号、姓名、职称、研究方向，其中每个导师的职工编号是唯一的。
+若干研究生，包括学号、姓名、性别、入学日期，其中每个研究生的学号是唯一的。
+每个导师可以带若干研究生，但每个研究生只能有一个导师。
+请设计一个数据库，要求可以正确体现导师和研究生之间的关系。
+设计完毕之后，请插入一定量的数据，并验证你设计的数据库是否满足要求。
+
+在你设计的表中插入若干数据。
+
+CREATE TABLE teacher(
+	tid INT PRIMARY KEY,
+	tname VARCHAR(20),
+	title VARCHAR(10),
+	research VARCHAR(15)
+);
+
+CREATE TABLE student(
+	sid INT PRIMARY KEY,
+	sname VARCHAR(20),
+	gender CHAR(1),
+	entry DATE,
+	mentor_id INT
+);
+
+ALTER TABLE student ADD CONSTRAINT mentor_id_fk FOREIGN KEY(mentor_id) REFERENCES teacher(tid);
+
+INSERT INTO teacher VALUES
+(111, '张闻天','教授','中国古典音乐文化'),
+(222, '李小萌','研究员','生物技术'),
+(333,'王震','副教授','移动开发');
+
+INSERT INTO student VALUES
+(1, '奥特曼','男','1999-9-30',111),
+(2, '葫芦娃','男','2012-4-9',222),
+(3, '美羊羊','女','2011-11-2',111),
+(4, '张嘎','男','2003-9-30',333),
+(5, '草莓','女','2011-12-19',222),
+(6, '花花','女','2004-1-2',111);
+
+1.请查出每个导师所带研究生的姓名。
+SELECT tname,sname FROM student s INNER JOIN teacher t ON s.`mentor_id`=t.`tid`;
+
+2.清查出特定姓名的导师所带研究生的姓名。
+SELECT tname,sname FROM teacher t LEFT OUTER JOIN student s ON t.`tid`=s.`mentor_id` WHERE tname="李小萌";
+
+3.请查出每个导师所带研究生的数量。
+SELECT mentor_id,COUNT(sid) FROM student GROUP BY mentor_id;
+
+4.请查出每个导师所带的男研究生的数量。
+SELECT COUNT(gender), mentor_id FROM (SELECT * FROM student WHERE gender='男') AS res GROUP BY mentor_id;
+
+5.请找出选择哪个研究方向的导师最多。
+SELECT MAX(c) AS '研究方向导师最多' FROM (SELECT research AS c FROM teacher GROUP BY research) AS rs;
+
+6.请找统计不同职称的导师的个数。
+SELECT title, COUNT(tid) FROM teacher GROUP BY title; 
+ 
+除上述列出的各项操作之外
+你也可以自己再思考一些需求，然后再练习多表查询的相关操作。
+
+ 
